@@ -72,5 +72,39 @@ WHERE DEPARTMENT_ID = 30;
 --NEXT_DAY() 함수의 기능
 SELECT SYSDATE, TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS'), NEXT_DAY(SYSDATE, '수요일') FROM DUAL;
 
-SELECT * FROM EMPLOYEES WHERE EMPL;
+--03년도에 입사한 사원 알아내기
+SELECT HIRE_DATE , FIRST_NAME FROM EMPLOYEES WHERE TO_CHAR(HIRE_DATE, 'YY') = '03';
+SELECT * FROM EMPLOYEES;
+SELECT HIRE_DATE, TO_CHAR(HIRE_DATE,'YY/MM/DD HH24:MI:SS'), TO_CHAR(HIRE_DATE,'MI') FROM EMPLOYEES;
+SELECT TO_DATE('20041214','YYYY/MM/DD')+1 FROM DUAL;
+
+-- k로 끝나는 직원 알아내기
+SELECT HIRE_DATE , FIRST_NAME FROM EMPLOYEES WHERE SUBSTR(FIRST_NAME,-1,1)='K';
+SELECT FIRST_NAME FROM EMPLOYEES WHERE SUBSTR(FIRST_NAME,-1,1) = 'K';
+select first_name from employees where first_name like '%k';
+SELECT FIRST_NAME FROM EMPLOYEES WHERE FIRST_NAME LIKE '%k';
+select first_name from employees where upper(substr(first_name, length(first_name),1)) = upper('k');
+
+--현재시간표현
+select sysdate from dual;
+select to_char(sysdate,'yyyy/mm/dd hh24:mi:ss') from dual;
+select floor(sysdate - to_date('2024/11/05', 'yyyy/mm/dd')) from dual; --varchar 사용할수도있음
+
+--숫자를 우리가 원하는 형식으로 출력하기 1234567.23 => $1,234,567.23
+select trim(to_char(1234567.23,'L999,999,999.999')) as money from dual;
+select first_name , trim(to_char(salary,'L999,999,999.999')) as salary from employees;
+
+-- 문자 + 문자 = 숫자
+select '10000' + '20000' from dual;
+select to_number('10000' , '999,999') + to_number('20000' , '999,999') from dual;
+
+-- NVL
+select first_name , salary , commission_pct , job_id from employees order by job_id;
+select first_name , salary , NVL(commission_pct,0) , job_id from employees order by job_id;
+
+-- NVL2(대상, 널이아닐때 적용될값, 널일때 적용될값)
+select first_name, salary, commission_pct, salary + (salary*commission_pct) total from employees; 
+select first_name, salary, commission_pct, salary + (salary * NVL(commission_pct,0)) total from employees;
+select first_name, salary, commission_pct, salary + (salary * NVL2(commission_pct,commission_pct,0)) total from employees;
+
 
