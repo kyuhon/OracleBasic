@@ -64,12 +64,26 @@ desc emp01;
 alter table emp01 modify salary number(10,2) not null;
 
 create table student(
-    no number not null,
-    name char not null,
-    korean number not null,
-    english number not null,
-    math number not null,
-    
+    no number(10) not null, --pk를 주면 자동 not null
+    name char(5) not null,
+    korean number(3) not null default 0,
+    english number(3) not null default 0,
+    math number(3) not null default 0,
+    total number(3) default 0,
+    arg number(3,2) default 0.0,
+    stu_code number(10)--fk.부테이블,자식
 );
 
+create table stu_depart(
+    code number(10) not null, --주테이블,부모
+    name varchar2(10) not null
+);
+
+alter table student add constraint stu_no_pk primary key(no);
+alter table student add constraint depart_code_fk 
+foreign key(stu_code) references stu_depart(code) on delete cascade;
+-- on delete cascade : stu_code를 삭제하면 부모의 code도 같이 삭제
+-- on update cascade : stu_code를 수정하면 부모의 code도 같이 수정
+
 drop table student;
+
