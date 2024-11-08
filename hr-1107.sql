@@ -62,7 +62,7 @@ create table emp01(
     mgr number(4),
     hiredate date not null,
     sal number(7,2) not null,
-    comm number(7,2),
+    comm number(7,2) ,
     deptno number(2) not null
 );
 alter table emp01 add constraint empno_pk primary key(empno);
@@ -80,6 +80,10 @@ create table members (
     address varchar2(100) not null
 );
 alter table members add constraint id_pk primary key(id);
+alter table members add constraint name_uk unique(name);
+alter table members add constraint regno_uk unique(regno);
+alter table members add constraint hp_uk unique(hp);
+alter table members drop constraint name_uk; 
 
 create table books (
     code number(4) not null,
@@ -128,6 +132,7 @@ create table lend_return (
     l_total_pay number(7)
 );
 
+alter table lend_return drop constraint lr_code_pk;
 alter table lend_return add constraint lr_code_pk primary key(lr_code);
 alter table lend_return add constraint g_code_fk foreign key(g_code) references v_gogek(g_code);
 alter table lend_return add constraint v_code_fk foreign key(v_code) references video(v_code);

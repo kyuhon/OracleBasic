@@ -8,6 +8,7 @@ alter table subject drop constraint no_pk;
 alter table subject add constraint su_no_pk primary key(no);
 alter table subject add constraint su_num_uk unique(num);
 
+
 create table student(
     no number(4) not null,
     s_num number(8) not null,
@@ -26,6 +27,15 @@ alter table student add constraint st_no_pk primary key(no);
 alter table student add constraint st_num_uk unique(num);
 alter table student add constraint st_s_num_uk unique(s_num);
 alter table student drop constraint st_s_num_uk;
+
+alter table student add constraint st_no_pk primary key(no);
+alter table student add constraint st_id_uk unique(id);
+alter table student add constraint st_jumin_uk unique(jumin);
+alter table student add constraint st_email_uk unique(email);
+
+select * from user_constraints where table_name = upper('student')
+and constraint_type != 'c';
+select * from user_cons_columns where table_name = 'student';
 
 create table lesson(
     no number(4) not null,
@@ -49,8 +59,8 @@ alter table trainee add constraint tr_sec_ck check(section in('culture','major',
 
 -- 사용자 계정만들기(시스템관리자모드에서 진행해야됨)
 ALTER SESSION SET "_ORACLE_SCRIPT"=true;
-DROP USER model2 CASCADE; -- 기존 사용자 삭제
-CREATE USER model2 IDENTIFIED BY 123456 -- 사용자 이름: Model, 비밀번호 : 1234
+DROP USER studentdb CASCADE; -- 기존 사용자 삭제
+CREATE USER studentdb IDENTIFIED BY 123456 -- 사용자 이름: Model, 비밀번호 : 1234
     DEFAULT TABLESPACE USERS    -- 데이터 저장소
     TEMPORARY TABLESPACE TEMP;  -- 임시저장장소
-GRANT connect, resource, dba TO model2; -- 권한 부여
+GRANT connect, resource, dba TO studentdb; -- 권한 부여
