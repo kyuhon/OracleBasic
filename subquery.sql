@@ -102,3 +102,36 @@ select round(avg(salary),-2) from employees where department_id = (select depart
 select department_id, first_name, salary from employees
 where salary >= (select round(avg(salary),-2) from employees where department_id = (select department_id from employees where first_name = 'Valli'));
 
+
+
+select * from employees;
+select * from departments;
+select salary from employees where last_name = 'Tucker';
+select E.first_name, E.last_name, D.department_name, E.salary from employees E, departments D
+where salary > (select salary from employees where last_name = 'Tucker')
+and E.department_id = D.department_id;
+
+select job_id, min(salary) from employees group by job_id;
+
+select first_name, last_name, job_id, salary, hire_date from employees
+where (job_id, salary) in (select job_id, min(salary) from employees group by job_id);
+
+select avg(salary) from employees group by department_id;
+
+
+SELECT AVG(salary) FROM employees E WHERE department_id = E.department_id;
+
+SELECT first_name, last_name AS Name, job_id, salary, department_id
+
+FROM employees E
+
+WHERE salary > (SELECT AVG(salary) FROM employees WHERE department_id = E.department_id);
+
+select first_name, last_name, job_id, salary, department_id, 
+(select round(avg(salary)) from employees WHERE department_id = E.department_id) as department_avg_salary 
+from employees E;
+
+select department_id, avg(salary) from employees group by department_id;
+
+select first_name, last_name, salary, department_id, job_id from employees E
+where salary > (select avg(salary) from employees E2 where E.department_id = E2.department_id);
