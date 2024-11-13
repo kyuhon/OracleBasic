@@ -54,3 +54,26 @@ maxvalue 100;
 
 -- sequence 삭제
 drop sequence dept_seq;
+
+-- 데이터 딕셔너리에서 인덱스 확인
+select * from user_indexes where table_name = 'EMPLOYEES';
+select * from user_ind_columns where table_name = 'EMPLOYEES';
+
+select * from employees where employee_id = 100;
+
+drop table emp10;
+
+create table emp10
+as
+select * from employees where 1=1;
+
+select * from emp10 where employee_id = 100;
+
+-- 인덱스 생성하기
+select * from user_ind_columns where table_name = 'EMP10';
+
+create unique index emp10_employee_ix
+on emp10(employee_id);
+
+-- 인덱스 삭제하기
+drop index emp10_employee_ix;
