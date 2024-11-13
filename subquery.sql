@@ -135,3 +135,13 @@ select department_id, avg(salary) from employees group by department_id;
 
 select first_name, last_name, salary, department_id, job_id from employees E
 where salary > (select avg(salary) from employees E2 where E.department_id = E2.department_id);
+
+select first_name, last_name, salary, E.department_id, job_id from employees E
+where salary > (select avg(salary) from employees where E.department_id = department_id);
+
+select department_id, round(avg(salary)) from employees group by department_id;
+
+select first_name, last_name, job_id, salary, department_id, 
+(select round(avg(salary)) from employees WHERE department_id = E.department_id) as department_avg_salary 
+from employees E;
+
