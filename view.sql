@@ -41,7 +41,7 @@ select * from view_emp02;
 select * from emp_copy;
 select * from user_constraints where table_name = 'emp_copy';
 -- 실수로 view_emp02 생성할 때 where절에 department_id = 10 을
--- 설정해서 select * from view_emp02에 삽입은 됐지면 출력되지 않음
+-- 설정해서 select * from view_emp02에 삽입은 됐지만 출력되지 않음
 
 -- view 3 생성하기
 create view view_emp03
@@ -91,5 +91,47 @@ select rownum, employee_id, first_name, hire_date from
 (select employee_id, first_name, hire_date from employees order by hire_date desc)
 where rownum <= 4;
 
+select employee_id, first_name, hire_date from employees order by hire_date desc;
+
+create view VIEW_LOC
+as
+select employee_id, first_name, job_id from employees;
+
+select * from employees;
+select * from departments;
+
+create view view_dept30
+as
+select E.first_name, E.hire_date, department_name from employees E, departments D
+where E.department_id = 30 and E.department_id = D.department_id;
+
+select * from view_dept30;
+
+create view view_dept_maxsal
+as
+select * from employees
+where (job_id, salary) in (select job_id, max(salary) from employees group by job_id);
+
+select * from view_sal_top3;
+
+create view view_sal_top3
+as
+select first_name, salary from
+(select rownum, first_name, salary from employees order by salary desc)
+where rownum <= 3;
+
+select rownum from employees;
+
+select rownum, first_name, salary
+
+from (select first_name, salary
+
+        from employees
+
+        order by salary desc)
+
+where rownum <=3;
 
 
+
+drop view view_sal_top3;
