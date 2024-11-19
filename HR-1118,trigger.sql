@@ -122,3 +122,7 @@ end:
 select first_name, salary, department_id, get_department_id, salary,
 get
 
+-- 
+-- 위에 글들 미완성 내용
+--
+
