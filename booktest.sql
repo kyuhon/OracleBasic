@@ -34,3 +34,41 @@ update books set title = 'KKK',publisher = 'JAVA', year = '2024', price = 33000
 where id = 3;
 
 select * from books;
+
+CREATE TABLE food (
+    id number(4), 
+    title varchar2(20),  
+    price number(6)
+);
+
+alter table food add constraint FOOD_ID_PK primary key(id);
+
+create sequence food_id_seq
+start with 1
+increment by 1;
+
+select * from user_cons_columns where table_name = 'food';
+INSERT INTO food VALUES (food_id_seq.nextval, 'apple', 1500);
+INSERT INTO food VALUES (food_id_seq.nextval, 'grape', 1000);
+INSERT INTO food VALUES (food_id_seq.nextval, 'orange', 500);
+
+drop table food ;
+
+select * from food;
+SELECT * FROM FOOD;
+COMMIT;
+
+CREATE OR REPLACE PROCEDURE  FOOD_PROCEDURE(
+    VID IN FOOD.ID%TYPE, VPRICE IN FOOD.PRICE%TYPE , VMESSAGE OUT VARCHAR2)
+IS
+    VFOOD_RT FOOD%ROWTYPE; 
+BEGIN
+    UPDATE FOOD 
+    SET PRICE = PRICE + VPRICE WHERE ID = VID; 
+    COMMIT;
+    SELECT * INTO VFOOD_RT FROM FOOD WHERE ID = VID; 
+    VMESSAGE := VFOOD_RT.ID||' 번호의 인상금액은 '|| VPRICE ||'이고 총 금액은'|| VFOOD_RT.PRICE ||'입니다'; 
+    DBMS_OUTPUT.PUT_LINE(VMESSAGE); 
+END;
+
+/
