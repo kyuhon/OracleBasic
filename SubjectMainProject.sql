@@ -54,22 +54,29 @@ Alter table lesson add constraint lesson_abbre_uk UNIQUE(abbre);
 create sequence lesson_seq 
 start with 1
 increment by 1;
-
+-- 테스팅
+select * from lesson;
+DELETE FROM LESSON WHERE NO = 10;
+UPDATE LESSON SET ABBRE = '01', NAME = '컴퓨터구조론' WHERE NO = 10;
+INSERT INTO LESSON VALUES(lesson_seq.NEXTVAL, '', '');
 -- trainee 수강신청
-
+drop table trainee;
 create table trainee( 
     no number ,                     --pk seq
     s_num varchar2(8) not null,     --student(fk) 학생번호
     abbre varchar2(2) not null,     --lesson(fk) 과목요약
     section varchar2(20) not null,  --전공,부전공,교양
-    tdate date default sysdate      --수강신청일
+    registdate date default sysdate      --수강신청일
 );
 Alter table trainee add constraint trainee_no_pk primary key(no);
 Alter table trainee add constraint trainee_student_num_fk 
     FOREIGN key(s_num) References student(num) on delete set null;
 Alter table trainee add constraint trainee_lesson_abbre_fk 
     FOREIGN key(abbre) References lesson(abbre) on delete set null;
-    
+
+
 create sequence trainee_seq 
 start with 1
 increment by 1;
+
+commit;
