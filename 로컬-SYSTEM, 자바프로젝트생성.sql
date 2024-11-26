@@ -20,7 +20,7 @@ autoextend on
 next 3M
 maxsize 500M;
 
---6 자바 프로젝트 사용자계정 생성하기
+--6 자바 프로젝트 사용자계정 생성하기(시스템 계정등록해서 진행함)(주의:여기서하는것이아니다)
 ALTER SESSION SET "_ORACLE_SCRIPT"=true;
 DROP USER javauser CASCADE; -- 기존 사용자 삭제
 CREATE USER javauser IDENTIFIED BY 123456 -- 사용자 이름: javauser, 비밀번호 : 123456
