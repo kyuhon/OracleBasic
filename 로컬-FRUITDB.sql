@@ -46,10 +46,15 @@ create table employee(
 no number,
 name varchar2(10),
 working_hours varchar2(10),
-salary number
+salary number,
+code_in_charge number
 );
-alter table employee add constraint employee_no_pk primary key(no);
 
+drop table employee;
+alter table employee add constraint employee_no_pk primary key(no);
+Alter table employee add constraint employee_code_in_charge_fk 
+    FOREIGN key(code_in_charge) References fruit(fruit_code) on delete set null;
+    
 create sequence employee_seq
 start with 1
 increment by 1;

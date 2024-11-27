@@ -20,7 +20,7 @@ create table student(
     name varchar2(12) not null,   --이름
     id varchar2(12) not null,     --아이디
     passwd varchar2(12) not null, --패스워드
-    s_num varchar2(2) not null,   --학과번호(fk)
+    s_num varchar2(2) ,   --학과번호(fk)
     birthday varchar2(8) not null,--생년월일 
     phone varchar2(15) not null,  --전화번호
     address varchar2(80) not null,--주소
@@ -42,12 +42,13 @@ select COUNT(*) AS COUNT from student where id = 10;
 -- 동일학과번호 총갯수
 select LPAD(count(*)+1,4,'0') as total_count from student where s_num = 10;
 -- lesson 과목
-
+drop table lesson;
 create table lesson( 
     no number ,                 --pk seq
     abbre varchar2(2) not null, --과목요약
-    name varchar2(20) not null  --과목이름
+    name varchar2(40) not null  --과목이름
 );
+
 Alter table lesson add constraint lesson_no_pk primary key(no); 
 Alter table lesson add constraint lesson_abbre_uk UNIQUE(abbre);
 
@@ -63,17 +64,20 @@ INSERT INTO LESSON VALUES(lesson_seq.NEXTVAL, '', '');
 drop table trainee;
 create table trainee( 
     no number ,                     --pk seq
-    s_num varchar2(8) not null,     --student(fk) 학생번호
-    abbre varchar2(2) not null,     --lesson(fk) 과목요약
+    s_num varchar2(8),     --student(fk) 학생번호
+    abbre varchar2(2),     --lesson(fk) 과목요약
     section varchar2(20) not null,  --전공,부전공,교양
-    registdate date default sysdate      --수강신청일
+    regdate date default sysdate      --수강신청일
 );
 Alter table trainee add constraint trainee_no_pk primary key(no);
 Alter table trainee add constraint trainee_student_num_fk 
     FOREIGN key(s_num) References student(num) on delete set null;
 Alter table trainee add constraint trainee_lesson_abbre_fk 
     FOREIGN key(abbre) References lesson(abbre) on delete set null;
-
+alter table trainee drop constraint trainee_lesson_abbre_fk;
+select * from trainee T inner join student S on T.s_num =S.num
+                        inner join lesson L on T.abbre = L.abbre 
+            order by T.no;
 
 create sequence trainee_seq 
 start with 1
