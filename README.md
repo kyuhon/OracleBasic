@@ -38,5 +38,8 @@ public static void main(String[] args) {
 ```
 
 # 7. 하이퍼링크(Hyperlink)
-네이버 <https://www.naver.com/>
+1. 네이버 <https://www.naver.com/>
+2. [네이버] (https://www.naver.com/) 이름에 링크를 걸수있음
 
+# 8. 이미지
+![오라클테스팅]()
