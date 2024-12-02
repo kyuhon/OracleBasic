@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="REVIEWS" directorySegmentName="seg_0" id="B76EBE6D-0FF8-8E8D-E8F9-06453140D734">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<schemaObject>E5B60230-754B-43A2-E04F-19458D807F2E</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>22690A27-7B06-193F-9FE4-5712FB7174AB</segment>
+<tableSpace>A09999BD-2AF5-9814-83B2-A5A0D6A0F0A9</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="WATCH_ID" id="26FF273A-8760-F7F4-DB3A-F87A710E867B">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REVIEW_ID" id="4C779624-C483-1A37-2B87-CC3F71708A88">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DESCRIPTION" id="72BAB398-33C1-FBBC-8EE8-7F5A792E42AC">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RATING" id="ACCC7279-D14C-0DA5-DA1E-214037408181">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AVG" id="D289C26F-2B91-962E-F8FC-A0E9DB092A52">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<defaultValue>NULL</defaultValue>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="REVIEWS_REVIEW_ID_PK" id="13A91F1A-65CB-BCF7-A6B0-1A01BBE7CC2F">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:34 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<schemaObject>E5B60230-754B-43A2-E04F-19458D807F2E</schemaObject>
+<segment>ECF535BD-A55B-4FDF-D736-DFAC6E0E467F</segment>
+<tableSpace>A09999BD-2AF5-9814-83B2-A5A0D6A0F0A9</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="REVIEWS_WATCH_HISTORY_FK" id="6E9EE582-6748-EB4A-BF34-5BA6EE1DEC45">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:34 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="REVIEWS_REVIEW_ID_PK" id="41DC8253-1D4D-0250-89F4-F5A16DDC270F">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:34 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<segment>ECF535BD-A55B-4FDF-D736-DFAC6E0E467F</segment>
+<tableSpace>A09999BD-2AF5-9814-83B2-A5A0D6A0F0A9</tableSpace>
+<existingIndex>13A91F1A-65CB-BCF7-A6B0-1A01BBE7CC2F</existingIndex>
+<indexSegment>ECF535BD-A55B-4FDF-D736-DFAC6E0E467F</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

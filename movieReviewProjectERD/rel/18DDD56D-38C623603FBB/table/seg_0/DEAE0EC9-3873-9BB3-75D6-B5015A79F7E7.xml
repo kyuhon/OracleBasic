@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DEAE0EC9-3873-9BB3-75D6-B5015A79F7E7" schemaObject="E5B60230-754B-43A2-E04F-19458D807F2E" name="USERS">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>JAVAUSER</sourceObjSchema>
+<sourceObjName>USERS</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USER_ID" id="7EA44233-F612-A10F-C54D-527490970F8F">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USERNAME" id="897F48A2-318B-9038-6095-EAE20765E15D">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USERNAME</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PASSWORD" id="1949CFEC-94A9-1646-1112-3FBBEB3CEDA3">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>PASSWORD</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="A9E526FC-A006-18DB-5013-72BDB7D8A01B">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FF7D2689-3316-5DA2-B859-77FB0B04E12D" name="USERS_USER_ID_PK">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>JAVAUSER</sourceObjSchema>
+<sourceObjName>USERS_USER_ID_PK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:34 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7EA44233-F612-A10F-C54D-527490970F8F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AE165E6B-9725-B16E-E703-A5FEF0663BE2" name="USERS_EMAIL_UK">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>JAVAUSER</sourceObjSchema>
+<sourceObjName>USERS_EMAIL_UK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:34 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A9E526FC-A006-18DB-5013-72BDB7D8A01B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E422B208-4C19-E07B-7C13-7F74293E6142" schemaObject="E5B60230-754B-43A2-E04F-19458D807F2E" name="USERS_EMAIL_UK">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>JAVAUSER</sourceObjSchema>
+<sourceObjName>USERS_EMAIL_UK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:34 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A9E526FC-A006-18DB-5013-72BDB7D8A01B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A219C018-8F55-3226-F6AD-A103B4B354DE" schemaObject="E5B60230-754B-43A2-E04F-19458D807F2E" name="USERS_USER_ID_PK">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>JAVAUSER</sourceObjSchema>
+<sourceObjName>USERS_USER_ID_PK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:34 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7EA44233-F612-A10F-C54D-527490970F8F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

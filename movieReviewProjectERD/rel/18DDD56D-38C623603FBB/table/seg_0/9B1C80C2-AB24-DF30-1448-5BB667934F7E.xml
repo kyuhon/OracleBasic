@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9B1C80C2-AB24-DF30-1448-5BB667934F7E" schemaObject="E5B60230-754B-43A2-E04F-19458D807F2E" name="MOVIES">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>JAVAUSER</sourceObjSchema>
+<sourceObjName>MOVIES</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MOVIE_ID" id="C4B2C2B1-7CFA-7523-626B-982597594751">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>MOVIES</sourceObjSchema>
+<sourceObjName>MOVIE_ID</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TITLE" id="6502AAAD-1207-BF92-E1B1-681DE9B897D8">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>MOVIES</sourceObjSchema>
+<sourceObjName>TITLE</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RELEASE_DATE" id="561E83F7-D175-1D5B-38BB-BCEC8EA197E2">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>MOVIES</sourceObjSchema>
+<sourceObjName>RELEASE_DATE</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DURATION" id="FC39768E-9179-9C55-1867-2E0EE8BB2A2C">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>MOVIES</sourceObjSchema>
+<sourceObjName>DURATION</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GENRE" id="3C89286F-0DDD-58F3-1EEE-C585CA97F44D">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>MOVIES</sourceObjSchema>
+<sourceObjName>GENRE</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4761C3EF-B2F8-CABC-DE54-C361BE2F6A03" name="MOVIES_MOVIE_ID_PK">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>JAVAUSER</sourceObjSchema>
+<sourceObjName>MOVIES_MOVIE_ID_PK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:34 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4B2C2B1-7CFA-7523-626B-982597594751"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="82E4DA0E-54F0-A07D-B0C5-D74BFE539184" schemaObject="E5B60230-754B-43A2-E04F-19458D807F2E" name="MOVIES_MOVIE_ID_PK">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>JAVAUSER</sourceObjSchema>
+<sourceObjName>MOVIES_MOVIE_ID_PK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:34 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4B2C2B1-7CFA-7523-626B-982597594751"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

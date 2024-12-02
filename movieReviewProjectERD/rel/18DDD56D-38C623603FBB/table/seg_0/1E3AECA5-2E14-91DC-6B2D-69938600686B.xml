@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1E3AECA5-2E14-91DC-6B2D-69938600686B" schemaObject="E5B60230-754B-43A2-E04F-19458D807F2E" name="WATCH_HISTORY">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>JAVAUSER</sourceObjSchema>
+<sourceObjName>WATCH_HISTORY</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="WATCH_ID" id="5EDE119C-D69A-CC34-0D15-9380F9286569">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>WATCH_HISTORY</sourceObjSchema>
+<sourceObjName>WATCH_ID</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_ID" id="49E477CF-9965-DD2C-7930-4809AD81D2E2">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>WATCH_HISTORY</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="82D52A5D-2C06-983B-662F-7DEB2C136AA4" referredColumn="7EA44233-F612-A10F-C54D-527490970F8F"/>
+</associations>
+</Column>
+<Column name="MOVIE_ID" id="F29D52CE-E82B-AFC1-494F-1D4EC0F53E1D">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>WATCH_HISTORY</sourceObjSchema>
+<sourceObjName>MOVIE_ID</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FDD95E5D-2B76-440D-E296-E16E3451EA52" referredColumn="C4B2C2B1-7CFA-7523-626B-982597594751"/>
+</associations>
+</Column>
+<Column name="WATCH_DATE" id="B4904E67-0762-DF9B-E171-FBBD08EA6D0A">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>WATCH_HISTORY</sourceObjSchema>
+<sourceObjName>WATCH_DATE</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WATCH_COUNT" id="91E045B2-A5C3-43C4-0909-2CF188C7CC70">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>WATCH_HISTORY</sourceObjSchema>
+<sourceObjName>WATCH_COUNT</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4E6B1ED9-E8AB-E7AF-548C-07B410162D1F" name="WATCH_HISTORY_WATCH_ID_PK">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>JAVAUSER</sourceObjSchema>
+<sourceObjName>WATCH_HISTORY_WATCH_ID_PK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:34 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5EDE119C-D69A-CC34-0D15-9380F9286569"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="88583F3D-831B-FBE2-B1B7-FBC01AFDC931" schemaObject="E5B60230-754B-43A2-E04F-19458D807F2E" name="WATCH_HISTORY_WATCH_ID_PK">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>JAVAUSER</sourceObjSchema>
+<sourceObjName>WATCH_HISTORY_WATCH_ID_PK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:34 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5EDE119C-D69A-CC34-0D15-9380F9286569"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A082AB1-EF15-B340-083A-D18AF47B96B8" name="WATCH_HISTORY_MOVIE_ID_FK">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:34 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F29D52CE-E82B-AFC1-494F-1D4EC0F53E1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B68F4048-A54E-2AF0-F6A2-120253DF0087" name="WATCH_HISTORY_USER_ID_FK">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:34 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="49E477CF-9965-DD2C-7930-4809AD81D2E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

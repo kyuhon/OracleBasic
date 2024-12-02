@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="18DDD56D-46D4-432A-C2CE-38C623603FBB" mainViewID="35E9B4BC-717C-3010-6E72-039151BF0E55">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:07 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>01F6E6D1-21D0-CFBD-ABDD-3988D1813575</selectedRDBMSSite>
+<importConnectionStamps>
+<importConnectionStamp class="oracle.dbtools.crest.imports.DBConnectionStamp">
+<connName>로컬-movie</connName>
+<connUser>javauser</connUser>
+<connType>1</connType>
+</importConnectionStamp>
+</importConnectionStamps>
+</relationalModel>

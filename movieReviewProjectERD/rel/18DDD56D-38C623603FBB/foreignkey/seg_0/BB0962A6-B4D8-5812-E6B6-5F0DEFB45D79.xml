@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="BB0962A6-B4D8-5812-E6B6-5F0DEFB45D79" containerWithKeyObject="B76EBE6D-0FF8-8E8D-E8F9-06453140D734" localFKIndex="6E9EE582-6748-EB4A-BF34-5BA6EE1DEC45" name="REVIEWS_WATCH_HISTORY_FK">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>JAVAUSER</sourceObjSchema>
+<sourceObjName>REVIEWS_WATCH_HISTORY_FK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:34 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<referredTableLongName>JAVAUSER.WATCH_HISTORY</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>1E3AECA5-2E14-91DC-6B2D-69938600686B</referredTableID>
+<keyObject>4E6B1ED9-E8AB-E7AF-548C-07B410162D1F</keyObject>
+<referredKeyID>4E6B1ED9-E8AB-E7AF-548C-07B410162D1F</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>WATCH_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

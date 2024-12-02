@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="movieReviewProjectERD" id="11BD0D4D-6F82-99D3-32D6-389CF0EE315B" version="3.5">
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:06 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>11BD0D4D-6F82-99D3-32D6-389CF0EE315B</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="797BA6F3-8B73-0CC9-DE73-6B3C5C7B465A">
+<designStoragePath>C:\</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

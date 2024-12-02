@@ -1,0 +1,32 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSpaceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableSpaceOraclev10g" name="JAVADATA" directorySegmentName="seg_0" id="A09999BD-2AF5-9814-83B2-A5A0D6A0F0A9">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjSchema>JAVAUSER</sourceObjSchema>
+<sourceObjName>JAVADATA</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:36:33 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<dsInitialExtent>65536</dsInitialExtent>
+<dsMaxExtents>2147483645</dsMaxExtents>
+<emUniformSize>0</emUniformSize>
+<extentManagement>LOCAL</extentManagement>
+<minExtLen>65536</minExtLen>
+<dsCompression>NOCOMPRESS</dsCompression>
+<encrypt>NO</encrypt>
+<fileType>SMALLFILE</fileType>
+<inMemory>NO</inMemory>
+<dataFiles>
+<DataFile class="oracle.dbtools.crest.model.design.storage.oracle.v10g.DataFileOraclev10g" name="APP_DATA.DBF" id="E4E295DF-83C3-AD2C-9B75-619744D79EDF">
+<sourceConnName>로컬-movie</sourceConnName>
+<sourceObjName>C:\ORACLEXE\ORADATA\XE\APP_DATA.DBF</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-12-02 08:38:06 UTC</createdTime>
+<ownerDesignName>movieReviewProjectERD</ownerDesignName>
+<autoextend>ON</autoextend>
+<fileName>C:\ORACLEXE\ORADATA\XE\APP_DATA.DBF</fileName>
+<maxSize>512000</maxSize>
+<nextBlockSize>3072</nextBlockSize>
+<size>20480</size>
+</DataFile>
+</dataFiles>
+</TableSpaceOraclev10g>
