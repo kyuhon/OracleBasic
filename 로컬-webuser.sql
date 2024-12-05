@@ -46,3 +46,12 @@ CREATE table LOGIN (
 
 alter table login add constraint login_id_pk primary key(id);
  
+ create table ACCOUNT(
+    NO         NUMBER(5,0) NOT NULL,
+    NAME     VARCHAR2(20) NOT NULL,
+    ID     VARCHAR2(4000) NOT NULL,
+    PWD     VARCHAR2(4000) NOT NULL,
+    REGDATE   DATE NOT NULL
+);
+alter table ACCOUNT add constraint ACCOUNT_NO_PK primary key (NO);
+alter table ACCOUNT add constraint ACCOUNT_ID_UQ UNIQUE(ID);
