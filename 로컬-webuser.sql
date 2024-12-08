@@ -1,9 +1,6 @@
-CREATE SEQUENCE visit_seq  -- 시퀀스이름
-    START WITH 1             -- 시작을 1로 설정
-    INCREMENT BY 1          
-    NOMAXVALUE             
-    NOCACHE
-    NOCYCLE;
+ -- 자바의 서블릿클래스를 사용하여 간단한 방명록만들기
+ -- http://localhost:8080/jspStudy/bbs/write.html
+ 
  
  CREATE table VISIT (
  NO         NUMBER(5,0) NOT NULL,
@@ -11,6 +8,14 @@ CREATE SEQUENCE visit_seq  -- 시퀀스이름
  MEMO       VARCHAR2(4000) NOT NULL,
  REGDATE    DATE NOT NULL
  );
+
+CREATE SEQUENCE visit_seq  -- 시퀀스이름
+    START WITH 1             -- 시작을 1로 설정
+    INCREMENT BY 1          
+    NOMAXVALUE             
+    NOCACHE
+    NOCYCLE;
+
  select * from visit;
  alter table visit add constraint visit_no_pk primary key(no);
  public final String LESSON_INSERT = "INSERT INTO LESSON VALUES(lesson_seq.NEXTVAL, 'KDJ', '처음으로 메모장 입력', sysdate) ";
