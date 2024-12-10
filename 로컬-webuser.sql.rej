@@ -1,0 +1,9 @@
+diff a/로컬-webuser.sql b/로컬-webuser.sql	(rejected hunks)
+@@ -11,6 +11,7 @@
+  MEMO       VARCHAR2(4000) NOT NULL,
+  REGDATE    DATE NOT NULL
+  );
++ 
+  select * from visit;
+  alter table visit add constraint visit_no_pk primary key(no);
+  public final String LESSON_INSERT = "INSERT INTO LESSON VALUES(lesson_seq.NEXTVAL, 'KDJ', '처음으로 메모장 입력', sysdate) ";
