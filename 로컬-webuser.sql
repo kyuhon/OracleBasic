@@ -11,6 +11,7 @@ CREATE SEQUENCE visit_seq  -- 시퀀스이름
  MEMO       VARCHAR2(4000) NOT NULL,
  REGDATE    DATE NOT NULL
  );
+ 
  select * from visit;
  alter table visit add constraint visit_no_pk primary key(no);
  public final String LESSON_INSERT = "INSERT INTO LESSON VALUES(lesson_seq.NEXTVAL, 'KDJ', '처음으로 메모장 입력', sysdate) ";
@@ -55,3 +56,23 @@ alter table login add constraint login_id_pk primary key(id);
 );
 alter table ACCOUNT add constraint ACCOUNT_NO_PK primary key (NO);
 alter table ACCOUNT add constraint ACCOUNT_ID_UQ UNIQUE(ID);
+
+
+-- 장표 회원가입
+-- jsp 회원가입 테이블
+CREATE TABLE SIGNUP (
+    ID VARCHAR2(12) ,                         -- 아이디 (4~12자의 영문 대소문자와 숫자)
+    PWD VARCHAR2(12) NOT NULL,                -- 비밀번호 (4~12자의 영문 대소문자와 숫자)
+    EMAIL VARCHAR2(100) NOT NULL,             -- 이메일 주소
+    NAME VARCHAR2(50) NOT NULL,               -- 이름
+    BIRTH NUMBER(10)                          -- 생년월일 (20001010)
+);
+
+ALTER TABLE SIGNUP ADD CONSTRAINT SIGNUP_ID_PK PRIMARY KEY(ID);
+
+-- jsp로그인테이블
+CREATE TABLE LOGIN2(
+    ID VARCHAR2(12),
+    PWD VARCHAR2(12) NOT NULL
+);
+ALTER TABLE LOGIN2 ADD CONSTRAINT LOGIN2_ID_PK PRIMARY KEY(ID);
