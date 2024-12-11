@@ -8,9 +8,6 @@
  MEMO       VARCHAR2(4000) NOT NULL,
  REGDATE    DATE NOT NULL
  );
-<<<<<<< HEAD
- 
-=======
 
 CREATE SEQUENCE visit_seq  -- 시퀀스이름
     START WITH 1             -- 시작을 1로 설정
@@ -19,7 +16,7 @@ CREATE SEQUENCE visit_seq  -- 시퀀스이름
     NOCACHE
     NOCYCLE;
 
->>>>>>> eb22388dfb4c7c6150841ae94ac2fd1b1d27ec18
+
  select * from visit;
  alter table visit add constraint visit_no_pk primary key(no);
  public final String LESSON_INSERT = "INSERT INTO LESSON VALUES(lesson_seq.NEXTVAL, 'KDJ', '처음으로 메모장 입력', sysdate) ";
@@ -84,3 +81,36 @@ CREATE TABLE LOGIN2(
     PWD VARCHAR2(12) NOT NULL
 );
 ALTER TABLE LOGIN2 ADD CONSTRAINT LOGIN2_ID_PK PRIMARY KEY(ID);
+
+
+-- 8강 학생관리 프로그램
+CREATE table STUDENT (
+ID  VARCHAR2(12)  NOT NULL,
+PASS VARCHAR2(12)  NOT NULL,
+NAME  VARCHAR2(10)  NOT NULL,
+PHONE1 VARCHAR2(3)   NOT NULL,
+PHONE2  VARCHAR2(4)   NOT NULL,
+PHONE3  VARCHAR2(4)   NOT NULL,
+EMAIL    VARCHAR2(30)  NOT NULL,
+ZIPCODE  VARCHAR2(7)   NOT NULL,
+ADDRESS1 VARCHAR2(120) NOT NULL,
+ADDRESS2 VARCHAR2(50)  NOT NULL
+);
+ 
+ 
+ ALTER TABLE STUDENT ADD CONSTRAINT STUDENT_PK PRIMARY KEY(ID);
+ 
+create table zipcode  (
+   seq                  NUMBER(10)  not null,
+   zipcode              VARCHAR2(50),
+   sido                 VARCHAR2(50),
+   gugun                VARCHAR2(50),
+   dong                 VARCHAR2(50),
+   bunji                VARCHAR2(50)
+ );
+ 
+ ALTER TABLE zipcode ADD CONSTRAINT zipcode_PK PRIMARY KEY(seq);
+ alter table zipcode modify bunji varchar2(100);
+ 
+ describe zipcode;
+ select * from zipcode;
