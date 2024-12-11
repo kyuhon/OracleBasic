@@ -97,6 +97,7 @@ ADDRESS1 VARCHAR2(120) NOT NULL,
 ADDRESS2 VARCHAR2(50)  NOT NULL
 );
  
+ describe student;
  
  ALTER TABLE STUDENT ADD CONSTRAINT STUDENT_PK PRIMARY KEY(ID);
  
@@ -114,3 +115,5 @@ create table zipcode  (
  
  describe zipcode;
  select * from zipcode;
+ commit;
+ select * from student;
