@@ -135,4 +135,12 @@ REGDATE     TIMESTAMP (6) DEFAULT SYSDATE,
 IP          VARCHAR2(20) NOT NULL
 );
 
-ALTER TABLE BOARD ADD CONSTRAINT BOARD_PK PRIMARY KEY(NUM);
+ALTER TABLE BOARD ADD CONSTRAINT BOARD_NUM_PK PRIMARY KEY(NUM);
+select * from board;
+
+create sequence board_seq
+ start with 1
+  increment by 1
+  nomaxvalue
+  nocache
+  nocycle;
