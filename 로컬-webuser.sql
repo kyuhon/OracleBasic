@@ -98,7 +98,7 @@ ADDRESS2 VARCHAR2(50)  NOT NULL
 );
  
  describe student;
- 
+ select * from student;
  ALTER TABLE STUDENT ADD CONSTRAINT STUDENT_PK PRIMARY KEY(ID);
  
 create table zipcode  (
@@ -117,3 +117,22 @@ create table zipcode  (
  select * from zipcode;
  commit;
  select * from student;
+ 
+ --------------10강 게시판 만들기(답변형)
+ 
+CREATE TABLE BOARD (
+"NUM"       NUMBER(7,0) NOT NULL, 
+WRITER      VARCHAR2(12) NOT NULL, 
+EMAIL       VARCHAR2(30) NOT NULL, 
+SUBJECT     VARCHAR2(50) NOT NULL, 
+PASS        VARCHAR2(10) NOT NULL, 
+READCOUNT   NUMBER(5,0) DEFAULT 0, 
+"REF"       NUMBER(5,0) DEFAULT 0, 
+STEP        NUMBER(3,0) DEFAULT 0, 
+"DEPTH"     NUMBER(3,0) DEFAULT 0, 
+REGDATE     TIMESTAMP (6) DEFAULT SYSDATE, 
+"CONTENT"   VARCHAR2(4000) NOT NULL, 
+IP          VARCHAR2(20) NOT NULL
+);
+
+ALTER TABLE BOARD ADD CONSTRAINT BOARD_PK PRIMARY KEY(NUM);
