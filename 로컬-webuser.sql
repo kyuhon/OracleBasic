@@ -144,3 +144,4 @@ create sequence board_seq
   nomaxvalue
   nocache
   nocycle;
+  
