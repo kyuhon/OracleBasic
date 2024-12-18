@@ -147,3 +147,5 @@ create sequence board_seq
   
 commit;  
 
+SELECT count(*) as count FROM STUDENT WHERE ID = 'abc';
+
