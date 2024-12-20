@@ -137,7 +137,7 @@ IP          VARCHAR2(20) NOT NULL
 
 ALTER TABLE BOARD ADD CONSTRAINT BOARD_NUM_PK PRIMARY KEY(NUM);
 select * from board;
-
+truncate table board;
 create sequence board_seq
  start with 1       --시작을 1로 설정
   increment by 1    -- 증가값을 1씩 증가
