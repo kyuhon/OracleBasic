@@ -149,3 +149,56 @@ commit;
 
 SELECT count(*) as count FROM STUDENT WHERE ID = 'abc';
 
+
+
+-- 스프링부트와 리액트 연동 테스트
+CREATE TABLE survey ( 
+    survey_idx NUMBER NOT NULL PRIMARY KEY,  
+    question VARCHAR2(4000) NOT NULL,  
+    ans1 VARCHAR2(500) NOT NULL, 
+    ans2 VARCHAR2(500) NOT NULL, 
+    ans3 VARCHAR2(500) NOT NULL, 
+    ans4 VARCHAR2(500) NOT NULL, 
+    status CHAR(1) DEFAULT '1' 
+);
+ 
+insert into survey values (1,'좋아하는 언어는 무엇입니까?','Java','C','Python','C#','1'); 
+select * from survey where survey_idx=1; 
+ 
+CREATE TABLE answer ( 
+    answer_idx NUMBER PRIMARY KEY,  
+    survey_idx NUMBER NOT NULL, 
+    num NUMBER NOT NULL 
+); 
+ 
+CREATE SEQUENCE answer_seq 
+    START WITH 1 
+    INCREMENT BY 1; 
+     
+insert into answer values  
+(answer_seq.nextVal ,1,2); 
+ 
+insert into answer values  
+(answer_seq.nextVal,1,3); 
+ 
+insert into answer values  
+(answer_seq.nextVal,1,4); 
+ 
+select * from answer; 
+ 
+CREATE OR REPLACE VIEW survey_v AS  
+SELECT survey_idx, num, COUNT(*) AS sum_num, 
+       ROUND( 
+         (SELECT COUNT(*) 
+          FROM answer  
+          WHERE survey_idx = s.survey_idx AND num = s.num) * 100.0 /  
+         (SELECT COUNT(*) 
+          FROM answer  
+          WHERE survey_idx = s.survey_idx), 1) AS rate  
+FROM answer s 
+GROUP BY survey_idx, num  
+ORDER BY num; 
+ 
+select * from survey_v where survey_idx=1;
+
+commit;
